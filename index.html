@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jaycee Lambo Autos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <button id="desktopSidebarToggle" class="btn btn-outline-light me-2 d-none d-lg-inline-block">
+        <i class="bi bi-list"></i>
+      </button>
+      <a class="navbar-brand" href="#hero">Jaycee Lambo Autos</a>
+    </div>
+    <button id="sidebarToggleBtn" class="btn btn-dark d-lg-none me-2" aria-label="Open sidebar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button id="closeSidebarBtn" class="close-btn" aria-label="Close sidebar">&times;</button>
+    <ul class="sidebar-nav">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#modal">Special Offer</a></li>
+      <li><a href="#accordion">FAQs</a></li>
+      <li><a href="#carousel">Featured Cars</a></li>
+      <li><a href="#typography">Our Mission</a></li>
+      <li><a href="#tooltip">Need Help?</a></li>
+      <li><a href="#list">Why Choose Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+  <!-- Hero Section -->
+  <div id="hero" class="hero" role="banner" aria-label="Jaycee Lambo Autos Banner">
+    <h1>Welcome to <br> <span>Jaycee Lambo Autos</span></h1>
+  </div>
+
+  <div class="container">
+
+    <!-- Modal Section -->
+    <section id="modal" class="my-5">
+      <h2>Special Offer</h2>
+      <p class="text-center mb-4 fs-5">Drive your dream car today with our premium leasing options and flexible plans!</p>
+      <div class="text-center">
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#offerModal">View Offer</button>
+      </div>
+      <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="offerModalLabel">Limited Time Offer!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fs-6">
+              Sign up now and get a free upgrade on your first luxury car rental. Experience performance and style like never before.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Choose Your Plan</h2>
+        <div class="row justify-content-center g-4">
+          <!-- Daily Plan -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Weekly Plan</h5>
+                <h3 class="text-primary">$2500<span class="fs-6">/week</span></h3>
+                <p class="text-muted">Perfect for quick getaways</p>
+                <ul class="list-unstyled text-start">
+                  <li>✔ Luxury Car Access</li>
+                  <li>✔ Free Delivery</li>
+                  <li>✔ 24/7 Support</li>
+                </ul>
+                <button class="btn btn-outline-primary mt-3">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly Plan -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-primary border-2">
+              <div class="card-body">
+                <h5 class="card-title">Monthly Plan</h5>
+                <h3 class="text-primary">$6000<span class="fs-6">/month</span></h3>
+                <p class="text-muted">Best for business or vacation</p>
+                <ul class="list-unstyled text-start">
+                  <li>✔ Premium Fleet Access</li>
+                  <li>✔ Concierge Service</li>
+                  <li>✔ Maintenance Included</li>
+                </ul>
+                <button class="btn btn-primary mt-3">Subscribe Weekly</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Monthly Plan -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Yearly Plan</h5>
+                <h3 class="text-primary">$12,000<span class="fs-6">/year</span></h3>
+                <p class="text-muted">Drive elite all month</p>
+                <ul class="list-unstyled text-start">
+                  <li>✔ Unlimited Mileage</li>
+                  <li>✔ Vehicle Swaps</li>
+                  <li>✔ Exclusive Deals</li>
+                </ul>
+                <button class="btn btn-outline-primary mt-3">Subscribe Monthly</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="accordion" class="my-5">
+      <h2>FAQs</h2>
+      <div class="accordion mx-auto" id="faqAccordion" style="max-width: 800px;">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              What is Jaycee Lambo Autos?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Jaycee Lambo Autos is your premium destination for luxury car rentals, leasing, and auto subscription plans featuring the world’s top brands.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              What kind of cars do you offer?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We offer a fleet of premium and exotic vehicles including Lamborghinis, Ferraris, Bentleys, and more.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              Do I need insurance to rent?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, all renters must provide valid insurance. We also offer rental protection packages for added peace of mind.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel -->
+    <section id="carousel" class="my-5">
+      <h2>Featured Cars</h2>
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width: 850px; margin: 0 auto;">
+        <div class="carousel-inner rounded-4 shadow-sm">
+          <div class="carousel-item active">
+            <img src="images/image.png" class="d-block w-100 img-fluid" alt="Lamborghini Huracan">
+          </div>
+          <div class="carousel-item">
+            <img src="images/uruss.jpg" class="d-block w-100 img-fluid" alt="Ferrari Roma">
+          </div>
+          <div class="carousel-item">
+            <img src="images/av.jpg" class="d-block w-100 img-fluid" alt="Rolls Royce Ghost">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section id="typography" class="my-5">
+      <h2>Our Mission</h2>
+      <p class="lead">
+        At Jaycee Lambo Autos, we strive to deliver unmatched driving experiences with the finest luxury and exotic cars. Whether for business or pleasure, our goal is to put you behind the wheel of your dream vehicle.
+      </p>
+    </section>
+
+    <!-- Tooltip Help -->
+    <section id="tooltip" class="my-5 text-center">
+      <h2>Need Help?</h2>
+      <p class="mb-3 fs-5">Questions? Our concierge team is ready to assist you 24/7.</p>
+      <button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Call or message us anytime for booking assistance and vehicle recommendations.">
+        Click for support 
+      </button>
+    </section>
+
+    <!-- Benefits -->
+    <section id="list" class="my-5">
+      <h2>Why Choose Us</h2>
+      <ul class="list-group mx-auto" style="max-width: 600px;">
+        <li class="list-group-item active">Exotic Car Fleet from Top Brands</li>
+        <li class="list-group-item">Flexible Plans with Transparent Pricing</li>
+        <li class="list-group-item">Dedicated Concierge & VIP Service</li>
+        <li class="list-group-item">Easy Booking and Fast Delivery</li>
+        <li class="list-group-item">24/7 Roadside Assistance</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="my-5">
+      <h2>Contact Us</h2>
+      <p class="lead text-center mb-4">
+        Ready to hit the road in style? Reach out and let us know how we can serve you.
+      </p>
+      <form>
+        <div class="mb-3">
+          <label for="contactName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="contactName" placeholder="Your full name" required />
+        </div>
+        <div class="mb-3">
+          <label for="contactEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required />
+        </div>
+        <div class="mb-3">
+          <label for="contactMessage" class="form-label">Message</label>
+          <textarea class="form-control" id="contactMessage" rows="5" placeholder="Tell us how we can help..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    &copy; 2025 Jaycee Lambo Autos. All rights reserved.
+  </footer>
+
+  <!-- Toast -->
+  <div id="successToast" class="toast-notification" role="alert" aria-live="assertive" aria-atomic="true" hidden>
+    <span class="toast-icon" aria-hidden="true">&#10003;</span>
+    <div class="toast-content">
+      <strong>Success!</strong> Thank you for contacting us. We'll get back to you shortly.
+      <button id="closeToastBtn" aria-label="Close notification">&times;</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Jay.js"></script>
+  <script>
+    const tooltipTriggerList = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')];
+    tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  </script>
+</body>
+</html>
